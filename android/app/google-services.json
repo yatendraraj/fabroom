@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "328241901809",
+    "firebase_url": "https://fabrooms.firebaseio.com",
+    "project_id": "fabrooms",
+    "storage_bucket": "fabrooms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328241901809:android:e06a51aa3c99b4f5f4f950",
+        "android_client_info": {
+          "package_name": "com.example.fabrooms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328241901809-4nf52ej3d0bjsbtr03mmqhq4h1veql27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUKOTQ5RZwO6ZXWCNxGI0SYsuIXHBc8TY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328241901809-4nf52ej3d0bjsbtr03mmqhq4h1veql27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
