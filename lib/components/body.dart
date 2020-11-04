@@ -1,13 +1,12 @@
 import 'package:fabrooms/components/renttype.dart';
 import 'package:fabrooms/components/size_config.dart';
 import 'package:flutter/material.dart';
-
 import 'Recomendedhotels.dart';
 
 class Body extends StatelessWidget {
   const Body({Key key}) : super(key: key);
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[

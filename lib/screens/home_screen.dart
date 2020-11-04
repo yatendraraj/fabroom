@@ -1,6 +1,7 @@
 import 'package:fabrooms/components/body.dart';
 import 'package:fabrooms/const.dart';
 import 'package:flutter/material.dart';
+import 'package:fabrooms/components/navigation_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String id = 'home_screen';
@@ -16,16 +17,40 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            DrawerHeader(
+
+              decoration: BoxDecoration(
+                color: Color(0xffe6e6fa),
+              ),
+              child: Container(
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                        child: Image.asset('images/new.png')),
+
+                  ],
+                ),
+              ),
+            ),
+            CustomListTile(icon: Icons.person,text: 'Profile',onTap: () {},),
+            CustomListTile(icon: Icons.notifications,text: 'Notification',onTap: () {},),
+            CustomListTile(icon: Icons.settings,text: 'Setting',onTap: () {},),
+            CustomListTile(icon: Icons.logout,text: 'Log out',onTap: () {},),
+            CustomListTile(icon: Icons.location_on_outlined,text: 'Know Your Location',onTap: () {},),
+            CustomListTile(icon: Icons.mail,text: 'Contact Us',onTap: () {},),
+            CustomListTile(icon: Icons.phone,text: 'Call Us',onTap: () {},),
+            CustomListTile(icon: Icons.domain_verification_sharp,text: 'version 1.0',onTap: () {},),
+          ],
+        ),
+
+      ),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color(0xff3b6978),
         elevation: 0,
         centerTitle: true,
-        leading: IconButton(
-            icon: Icon(
-              Icons.menu,
-              color: kIconcolour,
-            ),
-            onPressed: null),
         actions: <Widget>[
           IconButton(
             icon: ClipRect(

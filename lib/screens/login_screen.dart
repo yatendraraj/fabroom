@@ -115,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           final user = await _auth.signInWithEmailAndPassword(
                               email: email, password: password);
                           if (user != null) {
-                            Navigator.pushReplacement(
+                            Navigator.pushReplacement( //pushReplacement mtlb agr hum back karenge uss screen ke jaane ke baad toh app close seedha peeche ni jayega..
                               context,
                               MaterialPageRoute(
                                 builder: (context) => HomeScreen(),
