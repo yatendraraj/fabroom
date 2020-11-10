@@ -28,6 +28,12 @@ class _RenttypeState extends State<Renttype> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 5.0,
+                ),
+              ],
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(widget.images),

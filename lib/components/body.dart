@@ -1,4 +1,5 @@
 import 'package:fabrooms/components/renttype.dart';
+import 'package:fabrooms/components/searchcities.dart';
 import 'package:fabrooms/components/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,7 @@ class Body extends StatelessWidget {
               top: 220.0,
               left: 35.0,
               child: Container(
+                padding: EdgeInsets.only(left: 25.0, right: 10.0),
                 width: getProportionateScreenWidth(340),
                 height: getProportionateScreenHeight(60),
                 decoration: BoxDecoration(
@@ -38,24 +40,31 @@ class Body extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: TextField(
-                  onChanged: (value) {},
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: "Search by location…",
-                    hintStyle: TextStyle(
-                      fontSize: getProportionateScreenWidth(20),
-                      color: Color(0xFF464A7E),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        showSearch(context: context, delegate: DataSearch());
+                      },
+                      child: Text(
+                        "Search by location....",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
+                      ),
                     ),
-                    suffixIcon: Icon(Icons.search),
-                    contentPadding: EdgeInsets.symmetric(
-                      horizontal: getProportionateScreenWidth(30),
-                      vertical: getProportionateScreenWidth(15),
-                    ),
-                  ),
+                    IconButton(
+                      icon: Icon(Icons.search),
+                      onPressed: () {
+                        showSearch(context: context, delegate: DataSearch());
+                      },
+                    )
+                  ],
                 ),
               ),
-            ),
+            )
           ],
         ),
         SizedBox(

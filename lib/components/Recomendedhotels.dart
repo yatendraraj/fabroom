@@ -46,6 +46,7 @@ class Recomendedhotels extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       "Hotel Anpurana",
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: "Satisfy",
@@ -54,6 +55,7 @@ class Recomendedhotels extends StatelessWidget {
                     ),
                     Text(
                       "Near Gla university",
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         color: Colors.black54,
                         fontFamily: "Satisfy",
