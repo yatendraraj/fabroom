@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Renttype extends StatefulWidget {
+
   const Renttype({
     Key key,
     this.images,
     this.type,
     this.press,
   }) : super(key: key);
-
   final String images, type;
   final Function press;
 
