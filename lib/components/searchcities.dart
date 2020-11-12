@@ -1,5 +1,8 @@
 import 'package:fabrooms/components/searchbar.dart';
 import 'package:fabrooms/components/size_config.dart';
+import 'package:fabrooms/screens/renttypeflatscreen.dart';
+import 'package:fabrooms/screens/renttypehousescreen.dart';
+import 'package:fabrooms/screens/renttypepgsscreen.dart';
 import 'package:flutter/material.dart';
 
 class DataSearch extends SearchDelegate<String> {
@@ -86,7 +89,7 @@ class DataSearch extends SearchDelegate<String> {
                   textColor: Colors.white,
                   child: Text('Flats'),
                   onPressed: () {
-                    //vaishanvi screens
+                    Navigator.pushNamed(context, Renttypeflatscreen.id);
                   },
                 ),
                 SizedBox(
@@ -100,7 +103,7 @@ class DataSearch extends SearchDelegate<String> {
                   textColor: Colors.white,
                   child: Text('House'),
                   onPressed: () {
-                    //vaishanvi screens
+                    Navigator.pushNamed(context, Renttypescreen.id);
                   },
                 ),
                 SizedBox(
@@ -115,7 +118,7 @@ class DataSearch extends SearchDelegate<String> {
                   textColor: Colors.white,
                   child: Text("PG's"),
                   onPressed: () {
-                    //vaishanvi screens
+                    Navigator.pushNamed(context, Renttypepgscreen.id);
                   },
                 ),
               ],

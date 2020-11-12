@@ -1,13 +1,16 @@
 import 'package:fabrooms/components/renttype.dart';
 import 'package:fabrooms/components/searchcities.dart';
 import 'package:fabrooms/components/size_config.dart';
+import 'package:fabrooms/screens/renttypeflatscreen.dart';
+import 'package:fabrooms/screens/renttypehousescreen.dart';
+import 'package:fabrooms/screens/renttypepgsscreen.dart';
 import 'package:flutter/material.dart';
 import 'Recomendedhotels.dart';
 
 class Body extends StatelessWidget {
   const Body({Key key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
@@ -85,20 +88,21 @@ class Body extends StatelessWidget {
                 images: "images/flat.jpg",
                 type: "Flat",
                 press: () {
-                  //to do
+                  Navigator.pushNamed(context, Renttypeflatscreen.id);
                 },
               ),
               Renttype(
                 images: "images/house.jpg",
                 type: "House",
                 press: () {
-                  //to do
+                  Navigator.pushNamed(context, Renttypescreen.id);
                 },
               ),
               Renttype(
                 images: "images/pg.jpg",
                 type: "PG's",
                 press: () {
+                  Navigator.pushNamed(context, Renttypepgscreen.id);
                   //to do
                 },
               ),
@@ -128,10 +132,30 @@ class Body extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: <Widget>[
-              Recomendedhotels(),
-              Recomendedhotels(),
-              Recomendedhotels(),
-              Recomendedhotels(),
+              Recomendedhotels(
+                title: "Hotel Anpurana",
+                address: "Near Gla university",
+                price: "2000",
+                images: "images/hotel.jpg",
+              ),
+              Recomendedhotels(
+                title: "Hotel Anpurana",
+                address: "Near Gla university",
+                price: "2000",
+                images: "images/hotel.jpg",
+              ),
+              Recomendedhotels(
+                title: "Hotel Anpurana",
+                address: "Near Gla university",
+                price: "2000",
+                images: "images/hotel.jpg",
+              ),
+              Recomendedhotels(
+                title: "Hotel Anpurana",
+                address: "Near Gla university",
+                price: "2000",
+                images: "images/hotel.jpg",
+              ),
             ],
           ),
         )
