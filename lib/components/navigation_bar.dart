@@ -17,7 +17,7 @@ class CustomListTile extends StatelessWidget
             border: Border(bottom: BorderSide(color: Colors.grey.shade400))
         ),
         child: InkWell(
-          //inkwell widget provided by flutter sdk for featuring ok double tap and hover effect vagera customizable butoon samjo isse.x
+          //inkwell widget provided by flutter sdk for featuring ok double tap and hover effect vagera customizable butoon samjo isse.
           splashColor: Colors.deepOrange,
           onTap: onTap,
           child: Container(
