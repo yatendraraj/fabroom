@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fabrooms/screens/renttypeflatscreen.dart';
+import 'package:fabrooms/screens/renttypehousescreen.dart';
+import 'package:fabrooms/screens/renttypepgsscreen.dart';
 
 class Filter extends StatelessWidget {
   @override
@@ -38,7 +41,27 @@ class _FilterPageState extends State<FilterPage> {
       selectedRadioTile = val;
     });
   }
-
+  void flatScreen()
+  {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Renttypeflatscreen()),
+    );
+  }
+  void pgScreen()
+  {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Renttypepgscreen()),
+    );
+  }
+  void houseScreen()
+  {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Renttypescreen()),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,7 +95,8 @@ class _FilterPageState extends State<FilterPage> {
               secondary: OutlineButton(
                 child: Text("Search"),
                 onPressed: (){
-                  print("say hi");
+                  //print("say hi");
+                  flatScreen();
                 },
               ),
             ),
@@ -104,8 +128,8 @@ class _FilterPageState extends State<FilterPage> {
               secondary: OutlineButton(
                 child: Text("Search"),
                 onPressed: (){
-
-                  print("say hi");
+                    pgScreen();
+                  // print("say hi");
                 },
               ),
             ),
@@ -137,8 +161,8 @@ class _FilterPageState extends State<FilterPage> {
               secondary: OutlineButton(
                 child: Text("Search"),
                 onPressed: (){
-
-                  print("say hi");
+                    houseScreen();
+                  // print("say hi");
                 },
               ),
             ),
