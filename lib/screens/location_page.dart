@@ -17,7 +17,7 @@ class LocationPage extends StatelessWidget {
       body: Container(
         decoration : BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/lap.jpg'),
+              image: AssetImage('images/lap.webp'),
               fit: BoxFit.cover
           ),
         ),
