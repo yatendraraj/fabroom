@@ -1,12 +1,16 @@
 import 'package:fabrooms/components/renttype.dart';
+import 'package:fabrooms/components/searchcities.dart';
 import 'package:fabrooms/components/size_config.dart';
+import 'package:fabrooms/screens/renttypeflatscreen.dart';
+import 'package:fabrooms/screens/renttypehousescreen.dart';
+import 'package:fabrooms/screens/renttypepgsscreen.dart';
 import 'package:flutter/material.dart';
 import 'Recomendedhotels.dart';
 
 class Body extends StatelessWidget {
   const Body({Key key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
@@ -22,6 +26,7 @@ class Body extends StatelessWidget {
               top: 220.0,
               left: 35.0,
               child: Container(
+                padding: EdgeInsets.only(left: 25.0, right: 10.0),
                 width: getProportionateScreenWidth(340),
                 height: getProportionateScreenHeight(60),
                 decoration: BoxDecoration(
@@ -37,24 +42,31 @@ class Body extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: TextField(
-                  onChanged: (value) {},
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: "Search by location…",
-                    hintStyle: TextStyle(
-                      fontSize: getProportionateScreenWidth(20),
-                      color: Color(0xFF464A7E),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        showSearch(context: context, delegate: DataSearch());
+                      },
+                      child: Text(
+                        "Search by location....",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
+                      ),
                     ),
-                    suffixIcon: Icon(Icons.search),
-                    contentPadding: EdgeInsets.symmetric(
-                      horizontal: getProportionateScreenWidth(30),
-                      vertical: getProportionateScreenWidth(15),
-                    ),
-                  ),
+                    IconButton(
+                      icon: Icon(Icons.search),
+                      onPressed: () {
+                        showSearch(context: context, delegate: DataSearch());
+                      },
+                    )
+                  ],
                 ),
               ),
-            ),
+            )
           ],
         ),
         SizedBox(
@@ -76,20 +88,21 @@ class Body extends StatelessWidget {
                 images: "images/flat.jpg",
                 type: "Flat",
                 press: () {
-                  //to do
+                  Navigator.pushNamed(context, Renttypeflatscreen.id);
                 },
               ),
               Renttype(
                 images: "images/house.jpg",
                 type: "House",
                 press: () {
-                  //to do
+                  Navigator.pushNamed(context, Renttypescreen.id);
                 },
               ),
               Renttype(
                 images: "images/pg.jpg",
                 type: "PG's",
                 press: () {
+                  Navigator.pushNamed(context, Renttypepgscreen.id);
                   //to do
                 },
               ),
@@ -119,10 +132,30 @@ class Body extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: <Widget>[
-              Recomendedhotels(),
-              Recomendedhotels(),
-              Recomendedhotels(),
-              Recomendedhotels(),
+              Recomendedhotels(
+                title: "Hotel Anpurana",
+                address: "Near Gla university",
+                price: "2000",
+                images: "images/hotel.jpg",
+              ),
+              Recomendedhotels(
+                title: "Hotel Anpurana",
+                address: "Near Gla university",
+                price: "2000",
+                images: "images/hotel.jpg",
+              ),
+              Recomendedhotels(
+                title: "Hotel Anpurana",
+                address: "Near Gla university",
+                price: "2000",
+                images: "images/hotel.jpg",
+              ),
+              Recomendedhotels(
+                title: "Hotel Anpurana",
+                address: "Near Gla university",
+                price: "2000",
+                images: "images/hotel.jpg",
+              ),
             ],
           ),
         )

@@ -4,7 +4,13 @@ import 'package:flutter/material.dart';
 class Recomendedhotels extends StatelessWidget {
   const Recomendedhotels({
     Key key,
+    @required this.images,
+    @required this.title,
+    @required this.price,
+    @required this.address,
   }) : super(key: key);
+
+  final String images, title, price, address;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +36,7 @@ class Recomendedhotels extends StatelessWidget {
                   color: Colors.white,
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage("images/hotel.jpg"),
+                    image: AssetImage(images),
                   ),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),
@@ -45,7 +51,8 @@ class Recomendedhotels extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Text(
-                      "Hotel Anpurana",
+                      title,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: "Satisfy",
@@ -53,14 +60,15 @@ class Recomendedhotels extends StatelessWidget {
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "Near Gla university",
+                      address,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         color: Colors.black54,
                         fontFamily: "Satisfy",
                       ),
                     ),
                     Text(
-                      "Price: 2000",
+                      price,
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     )
