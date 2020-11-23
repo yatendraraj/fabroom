@@ -258,16 +258,11 @@ Widget myDetailsContainer3() {
       ),
       Padding(
         padding: const EdgeInsets.all(8.0),
-<<<<<<< HEAD
         child: Container(
             child: Text(
-          "Contact No. \u00B7 +91 9655076433",
+          "Contact No. \u00B7 +91 9455076433",
           style: TextStyle(
               color: Colors.black54,
-=======
-        child: Container(child: Text("Contact No. \u00B7 +91 9455076433",
-          style: TextStyle(color: Colors.black54,
->>>>>>> d85e10f87dbed3a52f89ab83e1a9ec08237c3d30
               fontSize: 25.0,
               fontFamily: "Satisfy",
               fontWeight: FontWeight.bold),
