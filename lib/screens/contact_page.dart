@@ -14,31 +14,29 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber[700],
+      backgroundColor: Colors.blue[100],
       body: SafeArea(
         child: Padding(
-          padding:  EdgeInsets.symmetric(horizontal:32.0),
+          padding: EdgeInsets.symmetric(horizontal: 32.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                backgroundImage:AssetImage('images/fab.jpg'),
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage('images/logo.png'),
                 radius: 100.0,
-
               ),
-
               SizedBox(
                 height: 10.0,
               ),
               Text(
                 'Fabroom',
                 style: TextStyle(
-                  fontFamily: 'Pacifico',
+                  fontFamily: "Satisfy",
                   fontSize: 32.0,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
-
               ),
               SizedBox(
                 height: 10.0,
@@ -49,7 +47,7 @@ class ProfileScreen extends StatelessWidget {
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                  fontFamily: 'Source Sans Pro',
+                  fontFamily: "Satisfy",
                   letterSpacing: 2.0,
                 ),
               ),
@@ -68,7 +66,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               Card(
-                child:ListTile(
+                child: ListTile(
                   leading: Icon(Icons.email_sharp),
                   title: Text('Suggestionsfabrooms@gmail.com'),
                 ),

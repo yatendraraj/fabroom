@@ -1,6 +1,6 @@
 import 'package:fabrooms/components/body.dart';
-import 'package:fabrooms/const.dart';
 import 'package:fabrooms/screens/profile_page.dart';
+import 'package:fabrooms/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fabrooms/components/navigation_bar.dart';
 import 'package:fabrooms/screens/call_page.dart';
@@ -11,8 +11,7 @@ import 'package:fabrooms/screens/location_page.dart';
 import 'package:fabrooms/screens/notification_page.dart';
 import 'package:fabrooms/screens/version_page.dart';
 
-class Home extends StatelessWidget
-{
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,6 +19,7 @@ class Home extends StatelessWidget
     );
   }
 }
+
 class HomeScreen extends StatefulWidget {
   static const String id = 'home_screen';
   HomeScreen({Key key}) : super(key: key);
@@ -29,128 +29,152 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  void profileImage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Profile()),
+    );
+  }
 
-  void profileImage()
-  {
+  void profileChange() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => Profile()),
     );
   }
-  void profileChange()
-  {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Profile()),
-    );
-  }
-  void notificationChange()
-  {
+
+  void notificationChange() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => Notifications()),
     );
   }
 
-  void filterChange()
-  {
+  void filterChange() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => Filter()),
     );
   }
 
-  void logoutChange()
-  {
-    Navigator.push(
+  void logoutChange() {
+    Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => Logout()),
+      MaterialPageRoute(
+        builder: (context) => WelcomeScreen(),
+      ),
     );
   }
 
-  void locationChange()
-  {
+  void locationChange() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => Location()),
     );
   }
 
-  void contactChange()
-  {
+  void contactChange() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => Contact()),
     );
   }
-  void callChange()
-  {
+
+  void callChange() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => Call()),
     );
   }
-  void versionChange()
-  {
+
+  void versionChange() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => Version()),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
-      drawer: Drawer(
-        child: ListView(
-          children: <Widget>[
-            DrawerHeader(
-
-              decoration: BoxDecoration(
-                color: Color(0xffe6e6fa),
-              ),
-              child: Container(
-                child: Column(
-                  children: <Widget>[
-                    Expanded(
-                        child: Image.asset('images/new.png')),
-
-                  ],
+      drawer: ClipRRect(
+        borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+        child: Drawer(
+          child: ListView(
+            children: <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                    color: Colors.blue[100],
+                    borderRadius: BorderRadius.circular(10)),
+                child: Container(
+                  child: Column(
+                    children: <Widget>[
+                      Expanded(child: Image.asset('images/new.png')),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            CustomListTile(icon: Icons.person,text: 'Profile',onTap: () {
-              profileChange();
-            } ,),
-            // CustomListTile(icon: Icons.notifications,text: 'Notification',onTap: () {
-            //   notificationChange();
-            // },),
-            CustomListTile(icon: Icons.filter_alt_outlined,text: 'Filter',onTap: () {
-              filterChange();
-            },),
+              CustomListTile(
+                icon: Icons.person,
+                text: 'Profile',
+                onTap: () {
+                  profileChange();
+                },
+              ),
+              // CustomListTile(icon: Icons.notifications,text: 'Notification',onTap: () {
+              //   notificationChange();
+              // },),
+              CustomListTile(
+                icon: Icons.filter_alt_outlined,
+                text: 'Filter',
+                onTap: () {
+                  filterChange();
+                },
+              ),
 
-            CustomListTile(icon: Icons.location_on_outlined,text: 'Know Your Location',onTap: () {
-              locationChange();
-            },),
-            CustomListTile(icon: Icons.mail,text: 'Contact Us',onTap: () {
-              contactChange();
-            },),
-            CustomListTile(icon: Icons.phone,text: 'Call Us',onTap: () {
-              callChange();
-            },),
-            CustomListTile(icon: Icons.logout,text: 'Log out',onTap: () {
-              logoutChange();
-            },),
-            CustomListTile(icon: Icons.domain_verification_sharp,text: 'version 1.0',onTap:() {
-              versionChange();
-            }),
-          ],
+              CustomListTile(
+                icon: Icons.location_on_outlined,
+                text: 'Know Your Location',
+                onTap: () {
+                  locationChange();
+                },
+              ),
+              CustomListTile(
+                icon: Icons.mail,
+                text: 'Contact Us',
+                onTap: () {
+                  contactChange();
+                },
+              ),
+              CustomListTile(
+                icon: Icons.phone,
+                text: 'Call Us',
+                onTap: () {
+                  callChange();
+                },
+              ),
+              CustomListTile(
+                icon: Icons.logout,
+                text: 'Log out',
+                onTap: () {
+                  logoutChange();
+                },
+              ),
+              CustomListTile(
+                  icon: Icons.domain_verification_sharp,
+                  text: 'version 1.0',
+                  onTap: () {
+                    versionChange();
+                  }),
+            ],
+          ),
         ),
-
       ),
       appBar: AppBar(
-        backgroundColor: Color(0xff3b6978),
+        backgroundColor: Colors.red,
         elevation: 0,
         centerTitle: true,
         actions: <Widget>[
@@ -158,16 +182,16 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: ClipRect(
               child: Image.asset("images/welcome.webp"),
             ),
-            onPressed:() {
+            onPressed: () {
               profileImage();
-              },
+            },
           ),
         ],
         title: Text(
           "Fabrooms",
           style: TextStyle(
-            color: Colors.lightBlue,
-            fontSize: 40,
+            color: Colors.white,
+            fontSize: 35,
             fontFamily: "Satisfy",
           ),
         ),

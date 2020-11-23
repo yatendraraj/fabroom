@@ -1,3 +1,4 @@
+import 'package:fabrooms/components/details.dart';
 import 'package:fabrooms/components/renttype.dart';
 import 'package:fabrooms/components/searchcities.dart';
 import 'package:fabrooms/components/size_config.dart';
@@ -137,24 +138,36 @@ class Body extends StatelessWidget {
                 address: "Near Gla university",
                 price: "2000",
                 images: "images/hotel.jpg",
+                press: () {
+                  Navigator.pushNamed(context, HotelDetailsPage.id);
+                },
               ),
               Recomendedhotels(
                 title: "Hotel Anpurana",
                 address: "Near Gla university",
                 price: "2000",
                 images: "images/hotel.jpg",
+                press: () {
+                  Navigator.pushNamed(context, HotelDetailsPage.id);
+                },
               ),
               Recomendedhotels(
                 title: "Hotel Anpurana",
                 address: "Near Gla university",
                 price: "2000",
                 images: "images/hotel.jpg",
+                press: () {
+                  Navigator.pushNamed(context, HotelDetailsPage.id);
+                },
               ),
               Recomendedhotels(
                 title: "Hotel Anpurana",
                 address: "Near Gla university",
                 price: "2000",
                 images: "images/hotel.jpg",
+                press: () {
+                  Navigator.pushNamed(context, HotelDetailsPage.id);
+                },
               ),
             ],
           ),

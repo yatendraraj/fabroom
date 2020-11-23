@@ -30,7 +30,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   end: Alignment.bottomCenter,
                   colors: [Colors.black, Colors.transparent],
                 ).createShader(
-                  Rect.fromLTRB(0, 0, rect.width, rect.height),
+                  Rect.fromLTRB(40, 70, rect.width, rect.height),
                 );
               },
               blendMode: BlendMode.dstIn,
@@ -47,14 +47,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               title: 'Log In',
               color: Colors.lightBlueAccent,
               onPressed: () {
-                Navigator.pushNamed(context, LoginScreen.id);
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginScreen(),
+                  ),
+                );
               },
             ),
             RoundedButton(
               title: 'Registration',
               color: Colors.blueAccent,
               onPressed: () {
-                Navigator.pushNamed(context, RegistrationScreen.id);
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RegistrationScreen(),
+                  ),
+                );
               },
             ),
           ],

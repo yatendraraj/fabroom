@@ -5,6 +5,8 @@ import 'package:fabrooms/screens/renttypehousescreen.dart';
 import 'package:fabrooms/screens/renttypepgsscreen.dart';
 import 'package:flutter/material.dart';
 
+import 'details.dart';
+
 class DataSearch extends SearchDelegate<String> {
   final cities = [
     "mumbai",
@@ -143,23 +145,46 @@ class DataSearch extends SearchDelegate<String> {
                     ),
                     Searchcitiestype(
                       images: "images/hotel.jpg",
+                      press: () {
+                        Navigator.pushNamed(context, HotelDetailsPage.id);
+                      },
                     ),
                     SizedBox(
                       height: 10,
                     ),
-                    Searchcitiestype(images: "images/hotel.jpg"),
+                    Searchcitiestype(
+                      images: "images/hotel.jpg",
+                      press: () {
+                        Navigator.pushNamed(context, HotelDetailsPage.id);
+                      },
+                    ),
                     SizedBox(
                       height: 10,
                     ),
-                    Searchcitiestype(images: "images/hotel.jpg"),
+                    Searchcitiestype(
+                      images: "images/hotel.jpg",
+                      press: () {
+                        Navigator.pushNamed(context, HotelDetailsPage.id);
+                      },
+                    ),
                     SizedBox(
                       height: 10,
                     ),
-                    Searchcitiestype(images: "images/hotel.jpg"),
+                    Searchcitiestype(
+                      images: "images/hotel.jpg",
+                      press: () {
+                        Navigator.pushNamed(context, HotelDetailsPage.id);
+                      },
+                    ),
                     SizedBox(
                       height: 10,
                     ),
-                    Searchcitiestype(images: "images/hotel.jpg"),
+                    Searchcitiestype(
+                      images: "images/hotel.jpg",
+                      press: () {
+                        Navigator.pushNamed(context, HotelDetailsPage.id);
+                      },
+                    ),
                   ],
                 ),
               ),

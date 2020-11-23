@@ -1,3 +1,4 @@
+import 'package:fabrooms/components/details.dart';
 import 'package:fabrooms/screens/home_screen.dart';
 import 'package:fabrooms/screens/login_screen.dart';
 import 'package:fabrooms/screens/registration_screen.dart';
@@ -33,6 +34,7 @@ class Fabrooms extends StatelessWidget {
         Renttypescreen.id: (context) => Renttypescreen(),
         Renttypeflatscreen.id: (context) => Renttypeflatscreen(),
         Renttypepgscreen.id: (context) => Renttypepgscreen(),
+        HotelDetailsPage.id: (context) => HotelDetailsPage(),
       },
     );
   }

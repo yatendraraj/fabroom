@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:dio/dio.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Call extends StatelessWidget {
   @override
@@ -17,18 +17,19 @@ class CallScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Colors.red,
         title: Text(
           'Team Members Contact Details',
-          style:TextStyle(
-              fontWeight: FontWeight.bold
-          ) ,
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: 25,
+              fontFamily: "Satisfy"),
         ),
       ),
       body: ListView(
         scrollDirection: Axis.vertical,
         children: <Widget>[
-
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Container(
@@ -47,7 +48,6 @@ class CallScreen extends StatelessWidget {
                             child: myDetailsContainer1(),
                           ),
                         ),
-
                         Container(
                           width: 200,
                           height: 200,
@@ -56,13 +56,12 @@ class CallScreen extends StatelessWidget {
                             child: Image(
                               fit: BoxFit.cover,
                               alignment: Alignment.topRight,
-                              image: AssetImage(
-                                  "images/akash.jpg"
-                              ),
+                              image: AssetImage("images/akash.jpg"),
                             ),
-                          ),),
-                      ],)
-                ),
+                          ),
+                        ),
+                      ],
+                    )),
               ),
             ),
           ),
@@ -84,7 +83,6 @@ class CallScreen extends StatelessWidget {
                             child: myDetailsContainer2(),
                           ),
                         ),
-
                         Container(
                           width: 200,
                           height: 200,
@@ -93,13 +91,12 @@ class CallScreen extends StatelessWidget {
                             child: Image(
                               fit: BoxFit.cover,
                               alignment: Alignment.topRight,
-                              image: AssetImage(
-                                  "images/sumit.jpg"
-                              ),
+                              image: AssetImage("images/sumit.jpg"),
                             ),
-                          ),),
-                      ],)
-                ),
+                          ),
+                        ),
+                      ],
+                    )),
               ),
             ),
           ),
@@ -121,7 +118,6 @@ class CallScreen extends StatelessWidget {
                             child: myDetailsContainer3(),
                           ),
                         ),
-
                         Container(
                           width: 200,
                           height: 200,
@@ -130,13 +126,12 @@ class CallScreen extends StatelessWidget {
                             child: Image(
                               fit: BoxFit.cover,
                               alignment: Alignment.topRight,
-                              image: AssetImage(
-                                  "images/vaishi.jpg"
-                              ),
+                              image: AssetImage("images/vaishi.jpg"),
                             ),
-                          ),),
-                      ],)
-                ),
+                          ),
+                        ),
+                      ],
+                    )),
               ),
             ),
           ),
@@ -158,7 +153,6 @@ class CallScreen extends StatelessWidget {
                             child: myDetailsContainer4(),
                           ),
                         ),
-
                         Container(
                           width: 200,
                           height: 200,
@@ -167,13 +161,12 @@ class CallScreen extends StatelessWidget {
                             child: Image(
                               fit: BoxFit.cover,
                               alignment: Alignment.topRight,
-                              image: AssetImage(
-                                  "images/yatte.jpg"
-                              ),
+                              image: AssetImage("images/yatte.jpg"),
                             ),
-                          ),),
-                      ],)
-                ),
+                          ),
+                        ),
+                      ],
+                    )),
               ),
             ),
           ),
@@ -189,19 +182,27 @@ Widget myDetailsContainer1() {
     children: <Widget>[
       Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(child: Text("Akash Verma",
-          style: TextStyle(color: Color(0xffe6020a),
+        child: Container(
+            child: Text(
+          "Akash Verma",
+          style: TextStyle(
+              color: Color(0xffe6020a),
               fontSize: 40.0,
-              fontWeight: FontWeight.bold),)),
+              fontFamily: "Satisfy",
+              fontWeight: FontWeight.bold),
+        )),
       ),
       Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-
-            child: Text("Contact No. \u00B7 +91 7060209545",
-              style: TextStyle(color: Colors.black54,
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold),)),
+            child: Text(
+          "Contact No. \u00B7 +91 7060209545",
+          style: TextStyle(
+              color: Colors.black54,
+              fontSize: 25.0,
+              fontFamily: "Satisfy",
+              fontWeight: FontWeight.bold),
+        )),
       ),
     ],
   );
@@ -213,38 +214,59 @@ Widget myDetailsContainer2() {
     children: <Widget>[
       Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(child: Text("Sumit Kumar",
-          style: TextStyle(color: Color(0xffe6020a),
+        child: Container(
+            child: Text(
+          "Sumit Kumar",
+          style: TextStyle(
+              color: Color(0xffe6020a),
               fontSize: 40.0,
-              fontWeight: FontWeight.bold),)),
+              fontFamily: "Satisfy",
+              fontWeight: FontWeight.bold),
+        )),
       ),
       Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(child: Text("Contact No. \u00B7 +91 8273415047",
-          style: TextStyle(color: Colors.black54,
+        child: Container(
+            child: Text(
+          "Contact No. \u00B7 +91 8273415047",
+          style: TextStyle(
+              color: Colors.black54,
               fontSize: 25.0,
-              fontWeight: FontWeight.bold),)),
+              fontFamily: "Satisfy",
+              fontWeight: FontWeight.bold),
+        )),
       ),
     ],
   );
 }
+
 Widget myDetailsContainer3() {
   return Column(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: <Widget>[
       Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(child: Text("Vaishnavi Shivhare",
-          style: TextStyle(color: Color(0xffe6020a),
+        child: Container(
+            child: Text(
+          "Vaishnavi Shivhare",
+          style: TextStyle(
+              color: Color(0xffe6020a),
               fontSize: 40.0,
-              fontWeight: FontWeight.bold),)),
+              fontFamily: "Satisfy",
+              fontWeight: FontWeight.bold),
+        )),
       ),
       Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(child: Text("Contact No. \u00B7 +91 9655076433",
-          style: TextStyle(color: Colors.black54,
+        child: Container(
+            child: Text(
+          "Contact No. \u00B7 +91 9655076433",
+          style: TextStyle(
+              color: Colors.black54,
               fontSize: 25.0,
-              fontWeight: FontWeight.bold),)),
+              fontFamily: "Satisfy",
+              fontWeight: FontWeight.bold),
+        )),
       ),
     ],
   );
@@ -256,17 +278,27 @@ Widget myDetailsContainer4() {
     children: <Widget>[
       Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(child: Text("Yatendra Rajput",
-          style: TextStyle(color: Color(0xffe6020a),
+        child: Container(
+            child: Text(
+          "Yatendra Rajput",
+          style: TextStyle(
+              color: Color(0xffe6020a),
               fontSize: 40.0,
-              fontWeight: FontWeight.bold),)),
+              fontFamily: "Satisfy",
+              fontWeight: FontWeight.bold),
+        )),
       ),
       Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(child: Text("Contact No. \u00B7 +91 8869039016",
-          style: TextStyle(color: Colors.black54,
+        child: Container(
+            child: Text(
+          "Contact No. \u00B7 +91 8869039016",
+          style: TextStyle(
+              color: Colors.black54,
               fontSize: 25.0,
-              fontWeight: FontWeight.bold),)),
+              fontFamily: "Satisfy",
+              fontWeight: FontWeight.bold),
+        )),
       ),
     ],
   );

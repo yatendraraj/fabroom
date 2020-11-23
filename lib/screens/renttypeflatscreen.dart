@@ -1,4 +1,5 @@
 import 'package:fabrooms/components/Recomendedhotels.dart';
+import 'package:fabrooms/components/details.dart';
 
 import 'package:flutter/material.dart';
 
@@ -36,30 +37,45 @@ class _RenttypeflatscreenState extends State<Renttypeflatscreen> {
                   address: "Near Gla university",
                   price: "2000",
                   images: "images/flat.jpg",
+                  press: () {
+                    Navigator.pushNamed(context, HotelDetailsPage.id);
+                  },
                 ),
                 Recomendedhotels(
                   title: "Hotel Anpurana",
                   address: "Near Gla university",
                   price: "2000",
                   images: "images/flat.jpg",
+                  press: () {
+                    Navigator.pushNamed(context, HotelDetailsPage.id);
+                  },
                 ),
                 Recomendedhotels(
                   title: "Hotel Anpurana",
                   address: "Near Gla university",
                   price: "2000",
                   images: "images/flat.jpg",
+                  press: () {
+                    Navigator.pushNamed(context, HotelDetailsPage.id);
+                  },
                 ),
                 Recomendedhotels(
                   title: "Hotel Anpurana",
                   address: "Near Gla university",
                   price: "2000",
                   images: "images/flat.jpg",
+                  press: () {
+                    Navigator.pushNamed(context, HotelDetailsPage.id);
+                  },
                 ),
                 Recomendedhotels(
                   title: "Hotel Anpurana",
                   address: "Near Gla university",
                   price: "2000",
                   images: "images/flat.jpg",
+                  press: () {
+                    Navigator.pushNamed(context, HotelDetailsPage.id);
+                  },
                 )
               ],
             ),

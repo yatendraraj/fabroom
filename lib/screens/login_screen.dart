@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 20,
                   ),
                   TextFormField(
-                    keyboardType: TextInputType.visiblePassword,
+                    keyboardType: TextInputType.emailAddress,
                     textAlign: TextAlign.center,
                     obscureText: true,
                     validator: (value) {
@@ -115,7 +115,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           final user = await _auth.signInWithEmailAndPassword(
                               email: email, password: password);
                           if (user != null) {
-                            Navigator.pushReplacement( //pushReplacement mtlb agr hum back karenge uss screen ke jaane ke baad toh app close seedha peeche ni jayega..
+                            Navigator.pushReplacement(
+                              //pushReplacement mtlb agr hum back karenge uss screen ke jaane ke baad toh app close seedha peeche ni jayega..
                               context,
                               MaterialPageRoute(
                                 builder: (context) => HomeScreen(),
