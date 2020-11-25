@@ -1,5 +1,6 @@
 import 'package:fabrooms/components/rounded_button.dart';
 import 'package:fabrooms/const.dart';
+import 'package:fabrooms/screens/forgetPassword.dart';
 import 'package:fabrooms/screens/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -99,7 +100,24 @@ class _LoginScreenState extends State<LoginScreen> {
                         hintText: 'Enter your Password'),
                   ),
                   SizedBox(
-                    height: 40,
+                    height: 0,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 150.0),
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 0.0, right: 0.0),
+                        child: ListTile(
+                          title: Text("Forgot your password?",
+                              style: TextStyle(color: Colors.blue)),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Forgetpassword(),
+                              ),
+                            );
+                          },
+                        )),
                   ),
                   RoundedButton(
                     color: Colors.lightBlueAccent,
